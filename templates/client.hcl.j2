@@ -29,7 +29,7 @@ client {
 {% endif %}
 {% if nomad_client_meta and nomad_client %}
   meta {
-{% for meta in nomad_client %}
+{% for meta in nomad_client_meta %}
     "{{ meta }}" = "{{ nomad_client_meta[meta] }}"
 {% endfor %}
   }
